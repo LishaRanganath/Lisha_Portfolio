@@ -36,9 +36,9 @@ function Introduction() {
             </div>
             <div className="introduction__actions">
               <a
-                href="/Image/resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1fKBKC_GkX5YcZDt4fTKDKugh4koxsApu"
                 className="introduction__btn introduction__btn--primary"
-                target="_blank"
+                download
                 rel="noopener noreferrer"
               >
                 Download Resume ↗
