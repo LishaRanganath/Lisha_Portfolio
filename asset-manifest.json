@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Lisha_Portfolio/static/css/main.edbf0bd3.css",
-    "main.js": "/Lisha_Portfolio/static/js/main.00665893.js",
+    "main.js": "/Lisha_Portfolio/static/js/main.f880133e.js",
     "static/js/453.26d03257.chunk.js": "/Lisha_Portfolio/static/js/453.26d03257.chunk.js",
     "static/media/1770664898155.jpeg": "/Lisha_Portfolio/static/media/1770664898155.e395078f859b45f44f8b.jpeg",
     "index.html": "/Lisha_Portfolio/index.html",
     "main.edbf0bd3.css.map": "/Lisha_Portfolio/static/css/main.edbf0bd3.css.map",
-    "main.00665893.js.map": "/Lisha_Portfolio/static/js/main.00665893.js.map",
+    "main.f880133e.js.map": "/Lisha_Portfolio/static/js/main.f880133e.js.map",
     "453.26d03257.chunk.js.map": "/Lisha_Portfolio/static/js/453.26d03257.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.edbf0bd3.css",
-    "static/js/main.00665893.js"
+    "static/js/main.f880133e.js"
   ]
 }
