@@ -1,0 +1,71 @@
+/* Services / Certificates Section */
+#services .services {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+#services .service-top {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#services .service-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+#services .service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  flex: 0 1 100%;
+}
+
+#services .service-item .icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+#services .service-item h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+#services .service-item p {
+  color: white;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Tablet — 2 columns */
+@media only screen and (min-width: 768px) {
+  #services .service-item {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+/* Desktop — 4 columns */
+@media only screen and (min-width: 1200px) {
+  #services .service-item {
+    flex: 0 1 calc(25% - 20px);
+  }
+}

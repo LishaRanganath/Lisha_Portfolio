@@ -1,0 +1,201 @@
+/* ── Professional Experience Section ── */
+#about {
+  background-color: #fff;
+}
+
+#about .experience {
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+#about .experience-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+#about .experience-header h1 {
+  margin-bottom: 10px;
+}
+
+#about .experience-subtitle {
+  font-size: 1.5rem;
+  color: #888;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+/* ── Timeline wrapper ── */
+#about .experience-timeline {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Vertical line */
+#about .experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, crimson, rgba(220,20,60,0.1));
+  border-radius: 2px;
+}
+
+/* ── Each entry ── */
+#about .exp-card {
+  position: relative;
+  padding-left: 56px;
+  padding-bottom: 40px;
+}
+
+#about .exp-card:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline dot */
+#about .exp-card__dot {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: crimson;
+  border: 3px solid #f7f7f7;
+  box-shadow: 0 0 0 2px crimson;
+}
+
+/* ── Card body ── */
+#about .exp-card__body {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+#about .exp-card__body:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.11);
+  border-left-color: crimson;
+}
+
+/* ── Header row ── */
+#about .exp-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+#about .exp-card__role {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 6px;
+}
+
+#about .exp-card__company {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444;
+  margin: 0;
+  line-height: 1.8rem;
+}
+
+#about .exp-card__location {
+  color: #888;
+  font-weight: 400;
+}
+
+/* Meta — type + duration */
+#about .exp-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+#about .exp-card__type {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background-color: crimson;
+  padding: 3px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#about .exp-card__duration {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── Description ── */
+#about .exp-card__desc {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 2.4rem;
+  margin: 0 0 14px;
+}
+
+/* ── Bullet points ── */
+#about .exp-card__points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#about .exp-card__points li {
+  font-size: 1.35rem;
+  color: #444;
+  line-height: 2rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+#about .exp-card__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+/* ── Tablet ── */
+@media only screen and (min-width: 768px) {
+  #about .experience-timeline::before {
+    left: 22px;
+  }
+
+  #about .exp-card {
+    padding-left: 68px;
+  }
+
+  #about .exp-card__dot {
+    left: 14px;
+    top: 24px;
+  }
+}

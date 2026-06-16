@@ -1,0 +1,181 @@
+/* ── Publications Section ── */
+#publications {
+  background-color: #fff;
+}
+
+#publications .publications {
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+  width: 100%;
+}
+
+#publications .publications-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+#publications .publications-header h1 {
+  margin-bottom: 10px;
+}
+
+#publications .publications-subtitle {
+  font-size: 1.5rem;
+  color: #888;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+/* ── Empty state ── */
+#publications .publications-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  border: 2px dashed #e0e0e0;
+  border-radius: 16px;
+  width: 100%;
+}
+
+#publications .empty-icon {
+  font-size: 4rem;
+}
+
+#publications .publications-empty p {
+  font-size: 1.6rem;
+  color: #aaa;
+  letter-spacing: 0.05rem;
+}
+
+/* ── List ── */
+#publications .publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* ── Card ── */
+#publications .pub-card {
+  display: flex;
+  gap: 28px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+#publications .pub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.09);
+  border-left-color: crimson;
+}
+
+/* ── Left column: type label + vertical line ── */
+#publications .pub-card__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+#publications .pub-card__type {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: crimson;
+  white-space: nowrap;
+}
+
+#publications .pub-card__line {
+  flex-grow: 1;
+  width: 2px;
+  background-color: rgba(220, 20, 60, 0.2);
+  border-radius: 2px;
+}
+
+/* ── Body ── */
+#publications .pub-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+#publications .pub-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.4;
+  margin: 0;
+}
+
+#publications .pub-card__authors {
+  font-size: 1.35rem;
+  color: #444;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.8rem;
+}
+
+#publications .pub-card__venue {
+  font-size: 1.25rem;
+  color: #888;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.8rem;
+}
+
+#publications .pub-card__desc {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 2.4rem;
+  margin: 4px 0 0;
+}
+
+#publications .pub-card__link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: crimson;
+  letter-spacing: 0.03rem;
+  transition: letter-spacing 0.2s ease;
+}
+
+#publications .pub-card__link:hover {
+  letter-spacing: 0.08rem;
+}
+
+/* ── Mobile: stack left col on top ── */
+@media only screen and (max-width: 600px) {
+  #publications .pub-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #publications .pub-card__left {
+    flex-direction: row;
+    writing-mode: initial;
+  }
+
+  #publications .pub-card__type {
+    writing-mode: initial;
+    transform: none;
+    font-size: 1.1rem;
+  }
+
+  #publications .pub-card__line {
+    flex-grow: 1;
+    width: auto;
+    height: 2px;
+  }
+}

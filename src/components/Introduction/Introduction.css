@@ -1,0 +1,231 @@
+/* ── Introduction Section ── */
+#introduction {
+  background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+#introduction::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+#introduction .introduction {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-direction: column;
+}
+
+/* ── Left side — animated text ── */
+#introduction .introduction__left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#introduction h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+}
+
+#introduction h1:nth-child(1) { animation-delay: 1s; }
+#introduction h1:nth-child(2) { animation-delay: 2s; }
+#introduction h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+
+#introduction h1 span {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 0;
+  background-color: crimson;
+  animation: text_reveal_box 1s ease;
+}
+
+#introduction h1:nth-child(1) span { animation-delay: 0.5s; }
+#introduction h1:nth-child(2) span { animation-delay: 1.5s; }
+#introduction h1:nth-child(3) span { animation-delay: 2.5s; }
+
+/* ── Right side — bio card ── */
+#introduction .introduction__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 32px 28px;
+  animation: fadeInRight 0.8s ease forwards;
+  animation-delay: 3.5s;
+  opacity: 0;
+  width: 100%;
+  margin-left: auto;
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Photo */
+#introduction .introduction__photo-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid crimson;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#introduction .introduction__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.2);
+}
+
+/* Bio text */
+#introduction .introduction__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+#introduction .introduction__bio-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.05rem;
+}
+
+#introduction .introduction__bio-role {
+  font-size: 1.3rem;
+  color: crimson;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  line-height: 1.6rem;
+}
+
+#introduction .introduction__bio-desc {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 2.2rem;
+  margin: 6px 0 4px;
+}
+
+/* Skill tags */
+#introduction .introduction__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+#introduction .introduction__skill-tag {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  background: rgba(220, 20, 60, 0.25);
+  border: 1px solid rgba(220, 20, 60, 0.5);
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.04rem;
+}
+
+/* Action buttons */
+#introduction .introduction__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  width: 100%;
+}
+
+#introduction .introduction__btn {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 9px 24px;
+  border-radius: 8px;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  transition: 0.25s ease;
+  display: inline-block;
+}
+
+#introduction .introduction__btn--primary {
+  background-color: crimson;
+  color: white;
+  border: 2px solid crimson;
+}
+
+#introduction .introduction__btn--primary:hover {
+  background-color: #a80020;
+  border-color: #a80020;
+}
+
+/* ── Tablet & Desktop — side by side ── */
+@media only screen and (min-width: 768px) {
+  #introduction .introduction {
+    flex-direction: row;
+    align-items: center;
+    padding: 90px 40px 60px;
+  }
+
+  #introduction h1 {
+    font-size: 6rem;
+  }
+
+  #introduction .introduction__right {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+  }
+
+  #introduction .introduction__bio {
+    text-align: left;
+  }
+
+  #introduction .introduction__skills {
+    justify-content: flex-start;
+  }
+
+  #introduction .introduction__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #introduction h1 {
+    font-size: 7rem;
+  }
+}

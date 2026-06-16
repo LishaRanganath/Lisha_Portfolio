@@ -1,0 +1,188 @@
+/* ── Education Section ── */
+#education {
+  background-color: #f7f7f7;
+}
+
+#education .education {
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  width: 100%;
+}
+
+#education .education-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+#education .education-header h1 {
+  margin-bottom: 10px;
+}
+
+#education .education-subtitle {
+  font-size: 1.5rem;
+  color: #888;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+/* ── Timeline ── */
+#education .education-timeline {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#education .education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, crimson, rgba(220,20,60,0.1));
+  border-radius: 2px;
+}
+
+/* ── Each entry ── */
+#education .edu-card {
+  position: relative;
+  padding-left: 56px;
+  padding-bottom: 32px;
+}
+
+#education .edu-card:last-child {
+  padding-bottom: 0;
+}
+
+#education .edu-card__dot {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: crimson;
+  border: 3px solid #f7f7f7;
+  box-shadow: 0 0 0 2px crimson;
+}
+
+/* ── Card body ── */
+#education .edu-card__body {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+#education .edu-card__body:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.11);
+  border-left-color: crimson;
+}
+
+/* ── Header row ── */
+#education .edu-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#education .edu-card__degree {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 6px;
+}
+
+#education .edu-card__school {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444;
+  margin: 0;
+  line-height: 1.8rem;
+}
+
+#education .edu-card__location {
+  color: #888;
+  font-weight: 400;
+}
+
+#education .edu-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+#education .edu-card__status {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background-color: crimson;
+  padding: 3px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#education .edu-card__duration {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── Points ── */
+#education .edu-card__points {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#education .edu-card__points li {
+  font-size: 1.35rem;
+  color: #444;
+  line-height: 2rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+#education .edu-card__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+/* ── Tablet ── */
+@media only screen and (min-width: 768px) {
+  #education .education-timeline::before {
+    left: 22px;
+  }
+
+  #education .edu-card {
+    padding-left: 68px;
+  }
+
+  #education .edu-card__dot {
+    left: 14px;
+    top: 24px;
+  }
+}
