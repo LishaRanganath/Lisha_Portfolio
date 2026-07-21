@@ -96,6 +96,19 @@
   text-transform: uppercase;
 }
 
+/* ── Status badge ── */
+#projects .project-card__status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f59e0b;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.04rem;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
 /* ── Title ── */
 #projects .project-card__title {
   font-size: 2.2rem;

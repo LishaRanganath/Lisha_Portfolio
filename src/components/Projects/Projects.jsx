@@ -60,6 +60,25 @@ const projectsData = [
   },
   {
     number: '05',
+    title: 'Power Grid Simulation System',
+    category: 'Full Stack · Software Architecture & Design · Georgia Tech',
+    status: 'In Progress',
+    desc: 'Full-stack power grid management simulator built for Georgia Tech\'s Software Architecture & Design course (CS6310). The system models power companies, generation plants, distribution infrastructure, and customer billing with real-time simulation of equipment degradation, breakdowns, and repairs.',
+    highlights: [
+      'Multi-company power grid simulation with hierarchical infrastructure and Manhattan distance-based spatial validation',
+      'Varying energy source modeling (Nuclear, Solar, Wind, Fossil Fuel) with source-specific degradation rates, stochastic output variability, and age-based breakdown probability',
+      'Billing engine computing revenue as usage × rate per customer and production cost proportional to currentOutput / maxOutput',
+      'RESTful backend with layered architecture (Controller → Service → Repository) following SOLID principles',
+      'JPA entity mapping with relational hierarchy: Company → Plant → Substation → Transformer → Customer',
+      'Employee dispatch system with labor cost calculation, materials cost, and company-ownership enforcement',
+      'Snapshot-based data archivability with configurable retention policies and point-in-time restore',
+      'Comprehensive input validation: duplicate ID rejection, capacity limits, distance constraints, and logical error detection',
+      'React frontend with modal-based CRUD forms, real-time dashboard tables, toast notifications, and calculated bill display',
+    ],
+    tags: ['Java', 'JavaScript', 'CSS', 'SQL', 'React 19', 'Spring Boot', 'JPA/Hibernate', 'H2 Database', 'REST API', 'Docker', 'Maven', 'Node.js'],
+  },
+  {
+    number: '06',
     title: 'Dance Posture Detection',
     category: 'Computer Vision · Mini Project 2022',
     desc: 'Built as a mini project in my Bachelors (group of 2), inspired by our shared passion for classical dance. The website helps beginners correct their dance postures and hand gestures in real time without needing a teacher.',
@@ -91,6 +110,9 @@ function Projects() {
               <div className="project-card__top">
                 <span className="project-card__number">{project.number}</span>
                 <span className="project-card__category">{project.category}</span>
+                {project.status && (
+                  <span className="project-card__status">{project.status}</span>
+                )}
               </div>
               <h2 className="project-card__title">{project.title}</h2>
               <p className="project-card__desc">{project.desc}</p>

@@ -36,7 +36,7 @@ function Introduction() {
             </div>
             <div className="introduction__actions">
               <a
-                href="https://drive.google.com/uc?export=download&id=1fKBKC_GkX5YcZDt4fTKDKugh4koxsApu"
+                href="https://drive.google.com/uc?export=download&id=1BLctau4f7I1Xae2sKK1jQmZM4qReArPz"
                 className="introduction__btn introduction__btn--primary"
                 download
                 rel="noopener noreferrer"

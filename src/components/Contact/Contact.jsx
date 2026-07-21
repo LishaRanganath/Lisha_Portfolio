@@ -10,7 +10,7 @@ const contactItems = [
   {
     icon: 'https://img.icons8.com/bubbles/100/000000/new-post.png',
     title: 'Email',
-    details: ['lishar2002@gmail.com'],
+    details: ['lishar2002@gmail.com', 'lranganath3@gatech.edu'],
     alt: 'email icon',
   },
   {
