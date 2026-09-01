@@ -82,7 +82,6 @@ const projectsData = [
     number: '06',
     title: 'Healthcare Mortality Prediction',
     category: 'Big Data Analytics in Healthcare · Georgia Tech',
-    status: 'In Progress',
     desc: 'End-to-end machine learning pipeline for patient mortality prediction using clinical event data (MIMIC database), built for Georgia Tech\'s Big Data Analytics in Healthcare course (CSE6250). Covers data preprocessing, feature engineering, model training, cross-validation, and model optimization.',
     highlights: [
       'Computed descriptive statistics (event counts, encounter counts, record lengths) for alive and deceased patient cohorts from raw clinical event sequences',
