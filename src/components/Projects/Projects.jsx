@@ -14,6 +14,7 @@ const projectsData = [
       'Ensured data reliability through atomic file operations, temporary file management, and idempotent task execution',
     ],
     tags: ['C++', 'gRPC', 'Protocol Buffers', 'Multithreading', 'Distributed Systems', 'MapReduce'],
+    link: 'https://github.com/rickyssj2/aos-project-4',
   },
   {
     number: '02',
@@ -57,12 +58,12 @@ const projectsData = [
       'Analyzed impact of NUMA architecture, cache coherence traffic, and network communication patterns on synchronization performance',
     ],
     tags: ['C', 'OpenMP', 'MPI', 'Parallel Computing', 'Distributed Systems', 'HPC', 'Linux', 'NUMA'],
+    link: 'https://github.com/rickyssj2/Project-2',
   },
   {
     number: '05',
     title: 'Power Grid Simulation System',
     category: 'Full Stack · Software Architecture & Design · Georgia Tech',
-    status: 'In Progress',
     desc: 'Full-stack power grid management simulator built for Georgia Tech\'s Software Architecture & Design course (CS6310). The system models power companies, generation plants, distribution infrastructure, and customer billing with real-time simulation of equipment degradation, breakdowns, and repairs.',
     highlights: [
       'Multi-company power grid simulation with hierarchical infrastructure and Manhattan distance-based spatial validation',
@@ -79,6 +80,23 @@ const projectsData = [
   },
   {
     number: '06',
+    title: 'Healthcare Mortality Prediction',
+    category: 'Big Data Analytics in Healthcare · Georgia Tech',
+    status: 'In Progress',
+    desc: 'End-to-end machine learning pipeline for patient mortality prediction using clinical event data (MIMIC database), built for Georgia Tech\'s Big Data Analytics in Healthcare course (CSE6250). Covers data preprocessing, feature engineering, model training, cross-validation, and model optimization.',
+    highlights: [
+      'Computed descriptive statistics (event counts, encounter counts, record lengths) for alive and deceased patient cohorts from raw clinical event sequences',
+      'Built a feature construction pipeline with observation/prediction window filtering, event aggregation (sum for diagnoses/drugs, count for labs), and min-max normalization',
+      'Mapped clinical events (SNOMED, LOINC, RxNorm codes) to feature indices and exported sparse feature vectors in SVMLight format',
+      'Trained and evaluated Logistic Regression, SVM, and Decision Tree classifiers reporting Accuracy, AUC, Precision, Recall, and F-Score',
+      'Implemented K-Fold and Randomized K-Fold cross-validation strategies for robust model evaluation',
+      'Designed a custom best-performing model with feature selection and hyperparameter tuning to maximize AUC on unseen test data',
+    ],
+    tags: ['Python', 'pandas', 'NumPy', 'scikit-learn', 'SciPy', 'Machine Learning', 'Clinical Data', 'SVMLight', 'Cross-Validation'],
+    link: 'https://github.com/LishaRanganath/healthcare_mortality_prediction',
+  },
+  {
+    number: '07',
     title: 'Dance Posture Detection',
     category: 'Computer Vision · Mini Project 2022',
     desc: 'Built as a mini project in my Bachelors (group of 2), inspired by our shared passion for classical dance. The website helps beginners correct their dance postures and hand gestures in real time without needing a teacher.',
