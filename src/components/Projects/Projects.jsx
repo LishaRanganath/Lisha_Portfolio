@@ -96,6 +96,21 @@ const projectsData = [
   },
   {
     number: '07',
+    title: 'Wildlife Trafficking Data Analysis Pipeline',
+    category: 'Data Analytics · Visualization · Georgia Tech',
+    status: 'In Progress',
+    desc: 'End-to-end data pipeline analyzing global illegal wildlife trafficking incidents using data from TRAFFIC\'s Wildlife Trade Portal. Combines graph analysis, SQL querying, interactive visualization, and data cleaning to uncover trafficking patterns.',
+    highlights: [
+      'Collected airport and flight route data from a REST API, constructed a graph of ~2,000 airports and ~14,000 flight routes, and identified trafficking hotspots using degree centrality analysis',
+      'Queried a SQLite database of 14,000+ trafficking incidents to uncover patterns in transport modes, detection methods, arrest rates, and sentencing trends',
+      'Built an interactive D3.js bar chart visualizing the most frequently trafficked species',
+      'Cleaned messy incident data using OpenRefine — extracted airport names from free text with regex, clustered and merged duplicate entries',
+      'Created a Flask web app with dynamic filtering to explore trafficking data by species class',
+    ],
+    tags: ['Python', 'SQLite', 'D3.js', 'Flask', 'REST APIs', 'OpenRefine', 'Docker'],
+  },
+  {
+    number: '08',
     title: 'Dance Posture Detection',
     category: 'Computer Vision · Mini Project 2022',
     desc: 'Built as a mini project in my Bachelors (group of 2), inspired by our shared passion for classical dance. The website helps beginners correct their dance postures and hand gestures in real time without needing a teacher.',
